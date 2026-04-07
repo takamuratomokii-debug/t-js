@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="description" content="Real time JS converter">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2064%2064'%3E%0A%3Ccircle%20cx%3D'32'%20cy%3D'32'%20r%3D'32'%20fill%3D'%23ffdd00'%2F%3E%0A%3Ctext%20x%3D'32'%20y%3D'46'%20font-size%3D'38'%20font-weight%3D'700'%20text-anchor%3D'middle'%20fill%3D'%23ffffff'%20font-family%3D'Arial'%20letter-spacing%3D'-1'%3EaW%3C%2Ftext%3E%0A%3C%2Fsvg%3E">
+  <meta name="description" content="Real time JS converter">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2064%2064'%3E%0A%3Ccircle%20cx%3D'32'%20cy%3D'32'%20r%3D'32'%20fill%3D'%23ffdd00'%2F%3E%0A%3Ctext%20x%3D'32'%20y%3D'46'%20font-size%3D'38'%20font-weight%3D'700'%20text-anchor%3D'middle'%20fill%3D'%23ffffff'%20font-family%3D'Arial'%20letter-spacing%3D'-1'%3EaW%3C%2Ftext%3E%0A%3C%2Fsvg%3E">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +30,6 @@
       flex-shrink: 0;
     }
 
-    /* 50/50 Split Layout */
     .main-wrapper {
       display: flex;
       flex: 1;
@@ -51,6 +51,14 @@
       flex-direction: column;
       padding: 20px;
       background: rgba(0, 0, 0, 0.1);
+      position: relative; /* Needed for absolute positioning of copy button */
+    }
+
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
     }
 
     .section-label {
@@ -58,7 +66,6 @@
       color: #52656d;
       text-transform: uppercase;
       font-size: 11px;
-      margin-bottom: 10px;
       letter-spacing: 2px;
     }
 
@@ -75,18 +82,44 @@
       font-family: inherit;
     }
 
-    /* Code styling for the output */
     #output {
       color: #1cb0f6; 
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 14px;
     }
 
+    /* Copy Button Styling */
+    .copy-btn {
+      background: #3b4c54;
+      color: #eeeeee;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.2s;
+      box-shadow: 0 3px 0 #1b2c33;
+    }
+
+    .copy-btn:hover {
+      background: #4b5d67;
+      filter: brightness(1.1);
+    }
+
+    .copy-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 #1b2c33;
+    }
+
+    .copy-btn.success {
+      background: #58cc02;
+      box-shadow: 0 3px 0 #46a302;
+    }
+
     ::placeholder {
       color: #3b4c54;
     }
 
-    /* Subtle focus indicator */
     .editor-pane:focus-within {
       background: rgba(255, 255, 255, 0.01);
     }
@@ -94,6 +127,7 @@
 </head>
 <body>
 
+  
 
   <div class="main-wrapper">
     <div class="editor-pane">
@@ -109,14 +143,37 @@ Hint: Which one looks right?</textarea>
     </div>
 
     <div class="output-pane">
-      <div class="section-label">Output (JSON Format)</div>
+      <div class="header-row">
+        <div class="section-label">Output (JSON Format)</div>
+        <button class="copy-btn" onclick="copyOutput()" title="Copy to clipboard">
+          <i id="copyIcon" class="fa-regular fa-copy"></i>
+        </button>
+      </div>
       <textarea id="output" readonly placeholder="JSON result will appear here..."></textarea>
     </div>
   </div>
 
 <script>
-// Run once on load to populate initial text
 window.onload = convertData;
+
+function copyOutput() {
+  const outputText = document.getElementById('output');
+  const btn = document.querySelector('.copy-btn');
+  const icon = document.getElementById('copyIcon');
+
+  if (!outputText.value) return;
+
+  navigator.clipboard.writeText(outputText.value).then(() => {
+    // Visual Feedback
+    btn.classList.add('success');
+    icon.className = 'fa-solid fa-check';
+    
+    setTimeout(() => {
+      btn.classList.remove('success');
+      icon.className = 'fa-regular fa-copy';
+    }, 2000);
+  });
+}
 
 function convertData() {
   const input = document.getElementById('input').value;
