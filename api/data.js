@@ -517,13 +517,13 @@
             {
               "id": 2,
               "question": "Write an excited sentence",
-              "answer": "I passed the exam!",
+              "answer": "ANY",
               "type":"word",
-              "choices": [
-                "I passed the exam!",
-                "i passed the exam.",
-                "I passed the exam?",
-                "pass exam."
+              "contains": [
+                
+                "I",
+                "!",
+                
               ],
               "hint": "Use an exclamation mark to show you are very happy or proud."
             },
