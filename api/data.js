@@ -1154,17 +1154,12 @@
               "contains" : [
                 "I live"
                 ],
-              "choices": [
-                "I live in Quezon City.",
-                "i live in quezon city.",
-                "I live Quezon City.",
-                "I living in Quezon City."
-              ],
+              "choices": [],
               "hint": "Remember to capitalize the name of the city and end with a period."
             },
             {
               "id": 2,
-              "question": "Use a frame to complete: I like ______",
+              "question": "Use a frame to complete: I like _ _ _ _",
               "answer": "I like pizza.",
               "type":"input",
               "choices": [
@@ -1173,32 +1168,22 @@
                 "I likes pizza.",
                 "Like pizza."
               ],
-              "hint": "Fill in the blank with your favorite food or activity."
+              "hint": "A food that has dough and pepperoni."
             },
             {
               "id": 3,
-              "question": "Use a frame to complete: I can ______",
+              "question": "Use a frame to complete: I can _ _ _",
               "answer": "I can draw.",
               "type":"input",
-              "choices": [
-                "I can draw.",
-                "I can drawing.",
-                "i can draw.",
-                "Can draw."
-              ],
-              "hint": "Think of a skill or something you are able to do."
+              "choices": [],
+              "hint": "Think of a skill that involves lines, color, and words."
             },
             {
               "id": 4,
               "question": "Use a frame to complete: I have a ______",
               "answer": "I have a dog.",
               "type":"input",
-              "choices": [
-                "I have a dog.",
-                "I have dog.",
-                "i have a dog.",
-                "Have a dog."
-              ],
+              "choices": [],
               "hint": "Mention something you own or a pet you have."
             },
             {
@@ -1206,12 +1191,7 @@
               "question": "Use a frame to complete: I am ______",
               "answer": "I am happy.",
               "type":"input",
-              "choices": [
-                "I am happy.",
-                "i am happy.",
-                "I is happy.",
-                "Am happy."
-              ],
+              "choices": [ ],
               "hint": "Use a word that describes how you are feeling right now."
             }
           ]
@@ -1225,38 +1205,23 @@
               "question": "Expand the sentence: She runs.",
               "answer": "She runs in the park.",
               "type":"input",
-              "choices": [
-                "She runs in the park.",
-                "she runs in the park.",
-                "She running in the park.",
-                "Runs in park."
-              ],
+              "choices": [],
               "hint": "Add a place or a time to make the sentence more detailed."
             },
             {
               "id": 2,
-              "question": "Expand the sentence: He eats.",
+              "question": "Expand the sentence: rice for lunch.",
               "answer": "He eats rice for lunch.",
               "type":"input",
-              "choices": [
-                "He eats rice for lunch.",
-                "he eats rice for lunch.",
-                "He eat rice for lunch.",
-                "Eating rice."
-              ],
+              "choices": [],
               "hint": "Tell us what he is eating or when he is eating it."
             },
             {
               "id": 3,
-              "question": "Expand the sentence: I read.",
+              "question": "Expand the sentence: Read book all day. ",
               "answer": "I read a book every night.",
               "type":"input",
-              "choices": [
-                "I read a book every night.",
-                "i read a book every night.",
-                "I reading a book.",
-                "Read book."
-              ],
+                "choices": [],
               "hint": "Mention what you are reading to provide more information."
             },
             {
@@ -1264,26 +1229,16 @@
               "question": "Expand the sentence: They play.",
               "answer": "They play basketball after school.",
               "type":"input",
-              "choices": [
-                "They play basketball after school.",
-                "they play basketball after school.",
-                "They plays basketball.",
-                "Play basketball."
-              ],
-              "hint": "Add the name of a game or a time when they play."
+                "choices": [],
+              "hint": "Add the name of a game or a time when they play; Maybe Before, After or Right now."
             },
             {
               "id": 5,
               "question": "Expand the sentence: We study.",
               "answer": "We study English at school.",
               "type":"input",
-              "choices": [
-                "We study English at school.",
-                "we study english at school.",
-                "We studies English.",
-                "Study English."
-              ],
-              "hint": "Specify the subject or the location where the studying happens."
+              "choices": [],
+              "hint": "Specify the subject or (at) the location where the studying happens. Sc-"
             }
           ]
         },
@@ -1296,12 +1251,7 @@
               "question": "Combine: I like milk. I like juice.",
               "answer": "I like milk and I like juice.",
               "type":"input",
-              "choices": [
-                "I like milk and I like juice.",
-                "I like milk or I like juice.",
-                "I like milk but I like juice.",
-                "Milk juice."
-              ],
+            "choices": [],
               "hint": "Use \"and\" to join two similar ideas together."
             },
             {
@@ -1309,25 +1259,15 @@
               "question": "Combine: She is tall. She is strong.",
               "answer": "She is tall and she is strong.",
               "type":"input",
-              "choices": [
-                "She is tall and she is strong.",
-                "She is tall but she is strong.",
-                "She is tall or she is strong.",
-                "Tall strong."
-              ],
-              "hint": "Connect these two positive descriptions with a linking word."
+            "choices": [],
+             "hint": "Use \"and\" to join two similar ideas together."
             },
             {
               "id": 3,
               "question": "Combine: I went to the park. I saw my friend.",
               "answer": "I went to the park and I saw my friend.",
               "type":"input",
-              "choices": [
-                "I went to the park and I saw my friend.",
-                "I went to the park but I saw my friend.",
-                "I went to the park so I saw my friend.",
-                "Park friend."
-              ],
+            "choices": [],
               "hint": "Use a word that shows these two actions happened together."
             },
             {
@@ -1335,25 +1275,15 @@
               "question": "Combine: He studied hard. He failed the test.",
               "answer": "He studied hard but he failed the test.",
               "type":"input",
-              "choices": [
-                "He studied hard but he failed the test.",
-                "He studied hard and he failed the test.",
-                "He studied hard or he failed the test.",
-                "Studied failed."
-              ],
+              "choices": [],
               "hint": "Use \"but\" to show a contrast between a good effort and a sad result."
             },
             {
               "id": 5,
               "question": "Combine: We cooked dinner. We ate together.",
-              "answer": "We cooked dinner and we ate together.",
+              "answer": "ANY",
               "type":"input",
-              "choices": [
-                "We cooked dinner and we ate together.",
-                "We cooked dinner but we ate together.",
-                "We cooked dinner or we ate together.",
-                "Cooked ate."
-              ],
+         "choices": [],
               "hint": "These actions follow each other, so use a simple connecting word."
             }
           ]
@@ -1365,27 +1295,18 @@
             {
               "id": 1,
               "question": "Write 3-5 connected sentences about your family.",
-              "answer": "My family is very important to me. We eat dinner together every night. We talk and laugh during meals. I love spending time with them.",
+              "answer": "ANY",
               "type":"input",
-              "choices": [
-                "Paragraph A as shown in Answer",
-                "A single sentence",
-                "A list of names",
-                "Unrelated sentences"
-              ],
+              "choices": [],
+              
               "hint": "Make sure each sentence follows the one before it to tell a small story."
             },
             {
               "id": 2,
               "question": "Write 3-5 connected sentences about your school.",
-              "answer": "My school is big and beautiful. I have many friends there. We learn many subjects every day. I enjoy going to school.",
+              "answer": "ANY",
               "type":"input",
-              "choices": [
-                "Paragraph A as shown in Answer",
-                "My school is red.",
-                "I like school.",
-                "School is where I go."
-              ],
+            "choices": [],
               "hint": "Describe the place, the people, and what you do there."
             },
             {
@@ -1393,38 +1314,26 @@
               "question": "Write 3-5 connected sentences about your favorite hobby.",
               "answer": "I love painting in my free time. I use bright colors and brushes. It helps me feel relaxed. I like to show my paintings to my family.",
               "type":"input",
-              "choices": [
-                "Paragraph A as shown in Answer",
-                "I like painting.",
-                "Painting is fun.",
-                "Colors are pretty."
-              ],
+              "choices": [],
               "hint": "Explain what the hobby is, how you do it, and how it makes you feel."
             },
             {
               "id": 4,
               "question": "Write 3-5 connected sentences about your pet.",
-              "answer": "I have a cat named Snowy. Snowy likes to sleep in the sun. I feed him every day. I love playing with him.",
+              "answer": "ANY",
               "type":"input",
-              "choices": [
-                "Paragraph A as shown in Answer",
-                "I have a cat.",
-                "My cat is white.",
-                "Cat sleeps."
-              ],
+            "choices": [],
               "hint": "Give your pet's name and describe their personality or habits."
             },
             {
               "id": 5,
               "question": "Write 3-5 connected sentences about your favorite food.",
-              "answer": "I love eating spaghetti. It has cheese and meatballs. I eat it every weekend. It is very delicious.",
+              "answer": "ANY",
               "type":"input",
-              "choices": [
-                "Paragraph A as shown in Answer",
-                "I like spaghetti.",
-                "Spaghetti is long.",
-                "Food is good."
+              "contains": [
+                "I", "like"
               ],
+              "choices": [],
               "hint": "Describe the ingredients, when you eat it, and why you like it."
             }
           ]
