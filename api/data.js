@@ -503,66 +503,54 @@
           "questions": [
             {
               "id": 1,
-              "question": "Write a question",
-              "answer": "What is your favorite subject?",
-              "type":"word",
-              "choices": [
-                "What is your favorite subject?",
-                "I like math.",
-                "My favorite subject.",
-                "Subject is math."
+              "question": "Write a question (?)",
+              "answer": "ANY",
+              "type":"input",
+              "contains": [
+                "?"
               ],
               "hint": "A question usually starts with words like Who, What, Where, or When."
             },
             {
               "id": 2,
-              "question": "Write an excited sentence",
-              "answer": "ANY",
-              "type":"word",
+              "question": "Write an excited sentence (!)",
+           "answer": "ANY",
+              "type":"input",
               "contains": [
-                
-                "I",
-                "!",
+           
+                "!"
                 
               ],
               "hint": "Use an exclamation mark to show you are very happy or proud."
             },
             {
               "id": 3,
-              "question": "Write a simple sentence",
-              "answer": "I like reading books.",
-              "type":"word",
-              "choices": [
-                "I like reading books.",
-                "reading books?",
-                "Like books.",
-                "i like reading"
+              "question": "Write a simple sentence (.)",
+          "answer": "ANY",
+              "type":"input",
+              "contains": [
+                "."
               ],
               "hint": "A simple statement ends with a period."
             },
             {
               "id": 4,
-              "question": "Write a question about school",
-              "answer": "Where is your classroom?",
-              "type":"word",
-              "choices": [
-                "Where is your classroom?",
-                "This is my classroom.",
-                "My classroom is big.",
-                "classroom."
+              "question": "Write a question about school (?)",
+          "answer": "ANY",
+              "type":"input",
+              "contains": [
+                "?"
+              
               ],
               "hint": "Ask about a place or person you find at school."
             },
             {
               "id": 5,
-              "question": "Write a sentence showing emotion",
-              "answer": "That was so fun!",
-              "type":"word",
-              "choices": [
-                "That was so fun!",
-                "That was fun.",
-                "Was that fun?",
-                "that was fun"
+              "question": "Write a sentence showing emotion (!)",
+                 "answer": "ANY",
+              "type":"input",
+              "contains": [
+                "!"
               ],
               "hint": "Use a punctuation mark that shows you really enjoyed the activity."
             }
@@ -584,8 +572,8 @@
               "answer": "Books",
               "type":"word",
               "choices": [
-                "Books",
                 "Stove",
+                "Books",
                 "Vegetables",
                 "Chair"
               ],
