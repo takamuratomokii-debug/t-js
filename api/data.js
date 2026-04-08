@@ -1189,7 +1189,7 @@
             {
               "id": 5,
               "question": "Use a frame to complete: I am ______",
-              "answer": "I am happy.",
+              "answer": "I am happy!",
               "type":"input",
               "choices": [ ],
               "hint": "Use a word that describes how you are feeling right now."
