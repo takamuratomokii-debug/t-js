@@ -1162,7 +1162,7 @@
               "id": 1,
               "question": "Use a frame to complete: I live in ______",
               "answer": "I live in Quezon City.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "I live in Quezon City.",
                 "i live in quezon city.",
@@ -1175,7 +1175,7 @@
               "id": 2,
               "question": "Use a frame to complete: I like ______",
               "answer": "I like pizza.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "I like pizza.",
                 "i like pizza.",
@@ -1188,7 +1188,7 @@
               "id": 3,
               "question": "Use a frame to complete: I can ______",
               "answer": "I can draw.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "I can draw.",
                 "I can drawing.",
@@ -1201,7 +1201,7 @@
               "id": 4,
               "question": "Use a frame to complete: I have a ______",
               "answer": "I have a dog.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "I have a dog.",
                 "I have dog.",
@@ -1214,7 +1214,7 @@
               "id": 5,
               "question": "Use a frame to complete: I am ______",
               "answer": "I am happy.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "I am happy.",
                 "i am happy.",
@@ -1233,7 +1233,7 @@
               "id": 1,
               "question": "Expand the sentence: She runs.",
               "answer": "She runs in the park.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "She runs in the park.",
                 "she runs in the park.",
@@ -1246,7 +1246,7 @@
               "id": 2,
               "question": "Expand the sentence: He eats.",
               "answer": "He eats rice for lunch.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "He eats rice for lunch.",
                 "he eats rice for lunch.",
@@ -1259,7 +1259,7 @@
               "id": 3,
               "question": "Expand the sentence: I read.",
               "answer": "I read a book every night.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "I read a book every night.",
                 "i read a book every night.",
@@ -1272,7 +1272,7 @@
               "id": 4,
               "question": "Expand the sentence: They play.",
               "answer": "They play basketball after school.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "They play basketball after school.",
                 "they play basketball after school.",
@@ -1285,7 +1285,7 @@
               "id": 5,
               "question": "Expand the sentence: We study.",
               "answer": "We study English at school.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "We study English at school.",
                 "we study english at school.",
@@ -1304,7 +1304,7 @@
               "id": 1,
               "question": "Combine: I like milk. I like juice.",
               "answer": "I like milk and I like juice.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "I like milk and I like juice.",
                 "I like milk or I like juice.",
@@ -1317,7 +1317,7 @@
               "id": 2,
               "question": "Combine: She is tall. She is strong.",
               "answer": "She is tall and she is strong.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "She is tall and she is strong.",
                 "She is tall but she is strong.",
@@ -1330,7 +1330,7 @@
               "id": 3,
               "question": "Combine: I went to the park. I saw my friend.",
               "answer": "I went to the park and I saw my friend.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "I went to the park and I saw my friend.",
                 "I went to the park but I saw my friend.",
@@ -1343,7 +1343,7 @@
               "id": 4,
               "question": "Combine: He studied hard. He failed the test.",
               "answer": "He studied hard but he failed the test.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "He studied hard but he failed the test.",
                 "He studied hard and he failed the test.",
@@ -1356,7 +1356,7 @@
               "id": 5,
               "question": "Combine: We cooked dinner. We ate together.",
               "answer": "We cooked dinner and we ate together.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "We cooked dinner and we ate together.",
                 "We cooked dinner but we ate together.",
@@ -1375,7 +1375,7 @@
               "id": 1,
               "question": "Write 3-5 connected sentences about your family.",
               "answer": "My family is very important to me. We eat dinner together every night. We talk and laugh during meals. I love spending time with them.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "Paragraph A as shown in Answer",
                 "A single sentence",
@@ -1388,7 +1388,7 @@
               "id": 2,
               "question": "Write 3-5 connected sentences about your school.",
               "answer": "My school is big and beautiful. I have many friends there. We learn many subjects every day. I enjoy going to school.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "Paragraph A as shown in Answer",
                 "My school is red.",
@@ -1401,7 +1401,7 @@
               "id": 3,
               "question": "Write 3-5 connected sentences about your favorite hobby.",
               "answer": "I love painting in my free time. I use bright colors and brushes. It helps me feel relaxed. I like to show my paintings to my family.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "Paragraph A as shown in Answer",
                 "I like painting.",
@@ -1414,7 +1414,7 @@
               "id": 4,
               "question": "Write 3-5 connected sentences about your pet.",
               "answer": "I have a cat named Snowy. Snowy likes to sleep in the sun. I feed him every day. I love playing with him.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "Paragraph A as shown in Answer",
                 "I have a cat.",
@@ -1427,7 +1427,7 @@
               "id": 5,
               "question": "Write 3-5 connected sentences about your favorite food.",
               "answer": "I love eating spaghetti. It has cheese and meatballs. I eat it every weekend. It is very delicious.",
-              "type":"write",
+              "type":"input",
               "choices": [
                 "Paragraph A as shown in Answer",
                 "I like spaghetti.",
