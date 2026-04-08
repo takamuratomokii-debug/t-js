@@ -353,7 +353,7 @@
             {
               "id": 5,
               "question": "Which mark is used for questions?",
-              "answer": "Question Mark (?)",
+              "answer": "Question Mark",
               "type":"word",
               "choices": [
                 "Periodic Mark",
