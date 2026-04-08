@@ -82,66 +82,45 @@
             {
               "id": 1,
               "question": "Rewrite: i am from cagayan",
-              "answer": "I am from Cagayan.",
-              "type":"word",
-              "choices": [
-                "i'am from cagayan.",
-                "Iam from cagayan.",
-                "I am from Cagayan.",
-                "i'am from Cagayan."
+              "answer": "ANY",
+              "contains":[
+                "I am from"
               ],
+              "type":"input",
+              
               "hint": "Capitalize the start of the sentence and names of places."
             },
             {
               "id": 2,
               "question": "Rewrite: my friend is jose",
               "answer": "My friend is Jose.",
-              "type":"word",
-              "choices": [
-                "my friend Is jose.",
-                "My friend is Jose",
-                "My friend is Jose.",
-                "my Friend is Jose"
-              ],
+           
+              "type":"input",
+              
               "hint": "Names of people always start with a capital letter."
             },
             {
               "id": 3,
               "question": "Rewrite: we visited manila",
               "answer": "We visited Manila.",
-              "type":"word",
-              "choices": [
-                "we Visited manila.",
-                "We Visited manila",
-                "We visited Manila.",
-                "we visited Manila"
-              ],
-              "hint": "Don't forget to capitalize the city name."
+              "type":"input",
+           
+              "hint": "Don't forget to capitalize the city name and a Period!"
             },
             {
               "id": 4,
               "question": "Rewrite: i love my teacher ms. reyes",
               "answer": "I love my teacher Ms. Reyes.",
-              "type":"word",
-              "choices": [
-                "i love my Teacher ms. reyes.",
-                "I love My teacher ms. reyes",
-                "I love my teacher Ms. Reyes.",
-                "i Love my teacher Ms. Reyes"
-              ],
+              "type":"input",
+             
               "hint": "Titles and surnames require capital letters."
             },
             {
               "id": 5,
               "question": "Rewrite: ana and i went to the park",
               "answer": "Ana and I went to the park.",
-              "type":"word",
-              "choices": [
-                "ana and i went to the park",
-                "Ana and i went to the park",
-                "Ana and I went to the park.",
-                "ana and I went to the park."
-              ],
+              "type":"input",
+             
               "hint": "The word \"I\" is always capitalized when referring to yourself."
             }
           ]
@@ -154,65 +133,40 @@
               "id": 1,
               "question": "Rewrite: my name is carlo and i live in cagayan",
               "answer": "My name is Carlo and I live in Cagayan.",
-              "type":"word",
-              "choices": [
-                "my name is carlo and i live in cagayan",
-                "My name is carlo and i live in cagayan",
-                "My name is Carlo and I live in Cagayan.",
-                "My name is Carlo and I live in cagayan"
-              ],
+              "type":"input",
+            
               "hint": "Remember to capitalize names, places, the word \"I,\" and end with a period."
             },
             {
               "id": 2,
               "question": "Rewrite: she likes to read books every day",
               "answer": "She likes to read books every day.",
-              "type":"word",
-              "choices": [
-                "she likes to read books every day",
-                "She likes to read books every day.",
-                "She likes to read Books every day",
-                "she likes to read Books every day"
-              ],
+              "type":"input",
+            
               "hint": "Start with a capital letter and end with a period."
             },
             {
               "id": 3,
               "question": "Rewrite: we went to manila last week",
               "answer": "We went to Manila last week.",
-              "type":"word",
-              "choices": [
-                "we went to manila last week",
-                "We went to Manila last week.",
-                "We went to manila last week.",
-                "we went to Manila last week"
-              ],
+              "type":"input",
+              
               "hint": "Cities are proper nouns and need capital letters."
             },
             {
               "id": 4,
               "question": "Rewrite: i have a pet dog named max",
               "answer": "I have a pet dog named Max.",
-              "type":"word",
-              "choices": [
-                "i have a pet dog named max",
-                "I have a pet dog named max",
-                "I have a pet dog named Max.",
-                "i have a pet dog named Max"
-              ],
+              "type":"input",
+             
               "hint": "Pets' names are capitalized just like people's names."
             },
             {
               "id": 5,
               "question": "Rewrite: my teacher is kind and helpful",
               "answer": "My teacher is kind and helpful.",
-              "type":"word",
-              "choices": [
-                "my teacher is kind and helpful",
-                "My teacher is kind and helpful.",
-                "My Teacher is kind and helpful",
-                "my Teacher is kind and helpfu"
-              ],
+              "type":"input",
+             
               "hint": "Ensure the sentence is capitalized correctly and has proper punctuation."
             }
           ]
@@ -223,67 +177,42 @@
           "questions": [
             {
               "id": 1,
-              "question": "Write a sentence about what motivates you",
+              "question": "Write a sentence about how your family motivates you",
               "answer": "My family motivates me to learn.",
-              "type":"word",
-              "choices": [
-                "My family motivates me to learn.",
-                "my family motivates me.",
-                "I like learning.",
-                "family is good."
-              ],
-              "hint": "Think about the people or things that make you want to work hard."
+              "type":"input",
+              
+              "hint": "Think about the family that helps you want to work hard."
             },
             {
               "id": 2,
               "question": "Write a sentence about your goal",
               "answer": "I want to finish my studies.",
-              "type":"word",
-              "choices": [
-                "I want to finish my studies.",
-                "i want to sleep.",
-                "My goal is happy.",
-                "studies are hard."
-              ],
+              "type":"input",
+             
               "hint": "What is something you want to achieve in the future?"
             },
             {
               "id": 3,
               "question": "Write a sentence about your inspiration",
               "answer": "My parents inspire me every day.",
-              "type":"word",
-              "choices": [
-                "My parents inspire me every day.",
-                "i have no inspiration.",
-                "Inspiration is important.",
-                "my parents are at home."
-              ],
+              "type":"input",
+              
               "hint": "Who do you look up to or want to be like?"
             },
             {
               "id": 4,
-              "question": "Write a sentence about your dream",
+              "question": "Write a sentence about your dream gets successful.",
               "answer": "I dream of becoming successful.",
-              "type":"word",
-              "choices": [
-                "I dream of becoming successful.",
-                "i want to dream.",
-                "Success is far.",
-                "my dream is big."
-              ],
+              "type":"input",
+             
               "hint": "What kind of life or career do you imagine for yourself?"
             },
             {
               "id": 5,
               "question": "Write a sentence about why you study",
               "answer": "I study to have a better future.",
-              "type":"word",
-              "choices": [
-                "I study to have a better future.",
-                "i study because i have to.",
-                "school is fun.",
-                "I study my books."
-              ],
+              "type":"input",
+              
               "hint": "Think about how education can help you later in life."
             }
           ]
