@@ -1149,8 +1149,11 @@
             {
               "id": 1,
               "question": "Use a frame to complete: I live in ______",
-              "answer": "I live in Quezon City.",
+              "answer": "ANY",
               "type":"input",
+              "contains" : [
+                "I live"
+                ],
               "choices": [
                 "I live in Quezon City.",
                 "i live in quezon city.",
