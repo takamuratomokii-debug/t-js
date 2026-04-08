@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="Real time JS converter">
+  <meta name="description" content="Real time JS/Text converter">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2064%2064'%3E%0A%3Ccircle%20cx%3D'32'%20cy%3D'32'%20r%3D'32'%20fill%3D'%23ffdd00'%2F%3E%0A%3Ctext%20x%3D'32'%20y%3D'46'%20font-size%3D'38'%20font-weight%3D'700'%20text-anchor%3D'middle'%20fill%3D'%23ffffff'%20font-family%3D'Arial'%20letter-spacing%3D'-1'%3EaW%3C%2Ftext%3E%0A%3C%2Fsvg%3E">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -20,14 +20,21 @@
       overflow: hidden;
     }
 
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #131f24;
+      z-index: 10;
+    }
+
     h1 {
-      text-align: center;
       color: #58cc02;
-      font-size: 1.8rem;
-      margin: 20px 0;
+      font-size: 1.4rem;
+      margin: 0;
       text-transform: lowercase;
       letter-spacing: -1px;
-      flex-shrink: 0;
     }
 
     .main-wrapper {
@@ -51,7 +58,7 @@
       flex-direction: column;
       padding: 20px;
       background: rgba(0, 0, 0, 0.1);
-      position: relative; /* Needed for absolute positioning of copy button */
+      position: relative;
     }
 
     .header-row {
@@ -88,24 +95,191 @@
       font-size: 14px;
     }
 
-    /* Copy Button Styling */
-    .copy-btn {
+    .btn-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .copy-btn, .toggle-btn {
       background: #3b4c54;
       color: #eeeeee;
       border: none;
-      padding: 8px 12px;
+      padding: 8px 16px;
       border-radius: 12px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 13px;
+      font-weight: 700;
       transition: all 0.2s;
       box-shadow: 0 3px 0 #1b2c33;
+      text-transform: uppercase;
     }
 
-    .copy-btn:hover {
-      background: #4b5d67;
+    .toggle-btn {
+      background: #1cb0f6;
+      box-shadow: 0 3px 0 #1589be;
+    }
+
+    .copy-btn:hover, .toggle-btn:hover {
       filter: brightness(1.1);
     }
 
+    .copy-btn:active, .toggle-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 #1b2c33;
+    }
+
+    .copy-btn.success {
+      background: #58cc02;
+      box-shadow: 0 3px 0 #46a302;
+    }
+
+    ::placeholder {
+      color: #3b4c54;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+  
+    <button class="toggle-btn" onclick="toggleMode()">
+      <i class="fa-solid fa-right-left"></i> <span id="modeText">Text to JS</span>
+    </button>
+  </div>
+
+  <div class="main-wrapper">
+    <div class="editor-pane">
+      <div class="section-label" id="inputLabel">Input (Plain Text)</div>
+      <textarea id="input" oninput="convertData()" placeholder="Start typing here...">Door 1: Basics
+
+Level 1: Spelling
+Question: Choose the correct spelling:
+Answer: friend
+Choices: friend, freind
+Hint: Which one looks right?</textarea>
+    </div>
+
+    <div class="output-pane">
+      <div class="header-row">
+        <div class="section-label" id="outputLabel">Output (JSON Format)</div>
+        <button class="copy-btn" onclick="copyOutput()" title="Copy to clipboard">
+          <i id="copyIcon" class="fa-regular fa-copy"></i>
+        </div>
+      </div>
+      <textarea id="output" readonly placeholder="Result will appear here..."></textarea>
+    </div>
+  </div>
+
+<script>
+let isTextToJs = true;
+
+window.onload = convertData;
+
+function toggleMode() {
+  isTextToJs = !isTextToJs;
+  const modeText = document.getElementById('modeText');
+  const inputLabel = document.getElementById('inputLabel');
+  const outputLabel = document.getElementById('outputLabel');
+  const inputArea = document.getElementById('input');
+  const outputArea = document.getElementById('output');
+
+  if (isTextToJs) {
+    modeText.innerText = "Text to JS";
+    inputLabel.innerText = "Input (Plain Text)";
+    outputLabel.innerText = "Output (JSON Format)";
+    outputArea.style.color = "#1cb0f6";
+  } else {
+    modeText.innerText = "JS to Text";
+    inputLabel.innerText = "Input (JSON / JS Object)";
+    outputLabel.innerText = "Output (Plain Text)";
+    outputArea.style.color = "#eeeeee";
+  }
+  
+  // Swap content
+  const temp = inputArea.value;
+  inputArea.value = outputArea.value;
+  convertData();
+}
+
+function copyOutput() {
+  const outputText = document.getElementById('output');
+  const btn = document.querySelector('.copy-btn');
+  const icon = document.getElementById('copyIcon');
+
+  if (!outputText.value) return;
+
+  navigator.clipboard.writeText(outputText.value).then(() => {
+    btn.classList.add('success');
+    icon.className = 'fa-solid fa-check';
+    setTimeout(() => {
+      btn.classList.remove('success');
+      icon.className = 'fa-regular fa-copy';
+    }, 2000);
+  });
+}
+
+function convertData() {
+  const input = document.getElementById('input').value;
+  const output = document.getElementById('output');
+
+  if (!input.trim()) {
+    output.value = "";
+    return;
+  }
+
+  if (isTextToJs) {
+    // TEXT TO JS LOGIC
+    try {
+      const lines = input.split('\n').map(l => l.trim()).filter(Boolean);
+      const result = { doors: [] };
+      let currentDoor = null;
+      let currentLevel = null;
+
+      lines.forEach(line => {
+        if (line.startsWith('Door')) {
+          currentDoor = { door: result.doors.length + 1, name: line, levels: [] };
+          result.doors.push(currentDoor);
+        } else if (line.startsWith('Level')) {
+          currentLevel = { level: (currentDoor?.levels.length || 0) + 1, title: line.split(':')[1]?.trim() || "Untitled", questions: [] };
+          if(currentDoor) currentDoor.levels.push(currentLevel);
+        } else if (line.startsWith('Question:')) {
+          if (currentLevel) currentLevel.questions.push({ id: currentLevel.questions.length + 1, question: line.replace('Question:', '').trim() });
+        } else if (line.startsWith('Answer:')) {
+          if (currentLevel && currentLevel.questions.length > 0) currentLevel.questions.at(-1).answer = line.replace('Answer:', '').trim();
+        } else if (line.startsWith('Choices:')) {
+          if (currentLevel && currentLevel.questions.length > 0) currentLevel.questions.at(-1).choices = line.replace('Choices:', '').split(',').map(c => c.trim());
+        } else if (line.startsWith('Hint:')) {
+          if (currentLevel && currentLevel.questions.length > 0) currentLevel.questions.at(-1).hint = line.replace('Hint:', '').trim();
+        }
+      });
+      output.value = JSON.stringify(result, null, 2);
+    } catch (e) { output.value = 'Typing... ⌛'; }
+  } else {
+    // JS TO TEXT LOGIC
+    try {
+      const data = JSON.parse(input);
+      let text = "";
+      data.doors.forEach(door => {
+        text += `${door.name}\n\n`;
+        door.levels.forEach(lvl => {
+          text += `Level ${lvl.level}: ${lvl.title}\n`;
+          lvl.questions.forEach(q => {
+            text += `Question: ${q.question}\n`;
+            if(q.answer) text += `Answer: ${q.answer}\n`;
+            if(q.choices) text += `Choices: ${q.choices.join(', ')}\n`;
+            if(q.hint) text += `Hint: ${q.hint}\n`;
+            text += `\n`;
+          });
+        });
+      });
+      output.value = text.trim();
+    } catch (e) { output.value = 'Waiting for valid JSON... ⌛'; }
+  }
+}
+</script>
+
+</body>
+</html>
     .copy-btn:active {
       transform: translateY(2px);
       box-shadow: 0 1px 0 #1b2c33;
