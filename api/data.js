@@ -139,7 +139,7 @@
               "choices": [
                 "ana and i went to the park",
                 "Ana and i went to the park",
-                "Ana and I went to the park",
+                "Ana and I went to the park.",
                 "ana and I went to the park."
               ],
               "hint": "The word \"I\" is always capitalized when referring to yourself."
