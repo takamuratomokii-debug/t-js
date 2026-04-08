@@ -82,38 +82,38 @@
             {
               "id": 1,
               "question": "Rewrite: i am from cagayan",
-              "answer": "I am from Cagayan",
+              "answer": "I am from Cagayan.",
               "type":"word",
               "choices": [
-                "i am from cagayan",
-                "I am from cagayan",
-                "I am from Cagayan",
-                "i am from Cagayan"
+                "i'am from cagayan.",
+                "Iam from cagayan.",
+                "I am from Cagayan.",
+                "i'am from Cagayan."
               ],
               "hint": "Capitalize the start of the sentence and names of places."
             },
             {
               "id": 2,
               "question": "Rewrite: my friend is jose",
-              "answer": "My friend is Jose",
+              "answer": "My friend is Jose.",
               "type":"word",
               "choices": [
-                "my friend is jose",
-                "My friend is jose",
+                "my friend Is jose.",
                 "My friend is Jose",
-                "my friend is Jose"
+                "My friend is Jose.",
+                "my Friend is Jose"
               ],
               "hint": "Names of people always start with a capital letter."
             },
             {
               "id": 3,
               "question": "Rewrite: we visited manila",
-              "answer": "We visited Manila",
+              "answer": "We visited Manila.",
               "type":"word",
               "choices": [
-                "we visited manila",
-                "We visited manila",
-                "We visited Manila",
+                "we Visited manila.",
+                "We Visited manila",
+                "We visited Manila.",
                 "we visited Manila"
               ],
               "hint": "Don't forget to capitalize the city name."
@@ -121,26 +121,26 @@
             {
               "id": 4,
               "question": "Rewrite: i love my teacher ms. reyes",
-              "answer": "I love my teacher Ms. Reyes",
+              "answer": "I love my teacher Ms. Reyes.",
               "type":"word",
               "choices": [
-                "i love my teacher ms. reyes",
-                "I love my teacher ms. reyes",
-                "I love my teacher Ms. Reyes",
-                "i love my teacher Ms. Reyes"
+                "i love my Teacher ms. reyes.",
+                "I love My teacher ms. reyes",
+                "I love my teacher Ms. Reyes.",
+                "i Love my teacher Ms. Reyes"
               ],
               "hint": "Titles and surnames require capital letters."
             },
             {
               "id": 5,
               "question": "Rewrite: ana and i went to the park",
-              "answer": "Ana and I went to the park",
+              "answer": "Ana and I went to the park.",
               "type":"word",
               "choices": [
                 "ana and i went to the park",
                 "Ana and i went to the park",
                 "Ana and I went to the park",
-                "ana and I went to the park"
+                "ana and I went to the park."
               ],
               "hint": "The word \"I\" is always capitalized when referring to yourself."
             }
