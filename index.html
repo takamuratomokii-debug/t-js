@@ -22,19 +22,11 @@
 
     .top-bar {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end; /* Align button to the right */
       align-items: center;
-      padding: 10px 20px;
+      padding: 15px 20px;
       background: #131f24;
       z-index: 10;
-    }
-
-    h1 {
-      color: #58cc02;
-      font-size: 1.4rem;
-      margin: 0;
-      text-transform: lowercase;
-      letter-spacing: -1px;
     }
 
     .main-wrapper {
@@ -95,11 +87,6 @@
       font-size: 14px;
     }
 
-    .btn-group {
-      display: flex;
-      gap: 10px;
-    }
-
     .copy-btn, .toggle-btn {
       background: #3b4c54;
       color: #eeeeee;
@@ -136,12 +123,15 @@
     ::placeholder {
       color: #3b4c54;
     }
+
+    .editor-pane:focus-within {
+      background: rgba(255, 255, 255, 0.01);
+    }
   </style>
 </head>
 <body>
 
   <div class="top-bar">
-  
     <button class="toggle-btn" onclick="toggleMode()">
       <i class="fa-solid fa-right-left"></i> <span id="modeText">Text to JS</span>
     </button>
@@ -164,7 +154,7 @@ Hint: Which one looks right?</textarea>
         <div class="section-label" id="outputLabel">Output (JSON Format)</div>
         <button class="copy-btn" onclick="copyOutput()" title="Copy to clipboard">
           <i id="copyIcon" class="fa-regular fa-copy"></i>
-        </div>
+        </button>
       </div>
       <textarea id="output" readonly placeholder="Result will appear here..."></textarea>
     </div>
@@ -176,12 +166,16 @@ let isTextToJs = true;
 window.onload = convertData;
 
 function toggleMode() {
+  const inputArea = document.getElementById('input');
+  const outputArea = document.getElementById('output');
+  
+  // Update state
   isTextToJs = !isTextToJs;
+  
+  // UI Updates
   const modeText = document.getElementById('modeText');
   const inputLabel = document.getElementById('inputLabel');
   const outputLabel = document.getElementById('outputLabel');
-  const inputArea = document.getElementById('input');
-  const outputArea = document.getElementById('output');
 
   if (isTextToJs) {
     modeText.innerText = "Text to JS";
@@ -195,9 +189,11 @@ function toggleMode() {
     outputArea.style.color = "#eeeeee";
   }
   
-  // Swap content
-  const temp = inputArea.value;
-  inputArea.value = outputArea.value;
+  // Transfer output to input to allow "round-trip" editing
+  if (outputArea.value && !outputArea.value.includes("Waiting") && !outputArea.value.includes("Typing")) {
+    inputArea.value = outputArea.value;
+  }
+  
   convertData();
 }
 
@@ -228,7 +224,6 @@ function convertData() {
   }
 
   if (isTextToJs) {
-    // TEXT TO JS LOGIC
     try {
       const lines = input.split('\n').map(l => l.trim()).filter(Boolean);
       const result = { doors: [] };
@@ -255,156 +250,31 @@ function convertData() {
       output.value = JSON.stringify(result, null, 2);
     } catch (e) { output.value = 'Typing... ⌛'; }
   } else {
-    // JS TO TEXT LOGIC
     try {
       const data = JSON.parse(input);
       let text = "";
-      data.doors.forEach(door => {
-        text += `${door.name}\n\n`;
-        door.levels.forEach(lvl => {
-          text += `Level ${lvl.level}: ${lvl.title}\n`;
-          lvl.questions.forEach(q => {
-            text += `Question: ${q.question}\n`;
-            if(q.answer) text += `Answer: ${q.answer}\n`;
-            if(q.choices) text += `Choices: ${q.choices.join(', ')}\n`;
-            if(q.hint) text += `Hint: ${q.hint}\n`;
-            text += `\n`;
-          });
+      if(data.doors) {
+        data.doors.forEach(door => {
+          text += `${door.name}\n\n`;
+          if(door.levels) {
+            door.levels.forEach(lvl => {
+              text += `Level ${lvl.level}: ${lvl.title}\n`;
+              if(lvl.questions) {
+                lvl.questions.forEach(q => {
+                  text += `Question: ${q.question}\n`;
+                  if(q.answer) text += `Answer: ${q.answer}\n`;
+                  if(q.choices) text += `Choices: ${q.choices.join(', ')}\n`;
+                  if(q.hint) text += `Hint: ${q.hint}\n`;
+                  text += `\n`;
+                });
+              }
+            });
+          }
+          text += `\n`;
         });
-      });
+      }
       output.value = text.trim();
     } catch (e) { output.value = 'Waiting for valid JSON... ⌛'; }
-  }
-}
-</script>
-
-</body>
-</html>
-    .copy-btn:active {
-      transform: translateY(2px);
-      box-shadow: 0 1px 0 #1b2c33;
-    }
-
-    .copy-btn.success {
-      background: #58cc02;
-      box-shadow: 0 3px 0 #46a302;
-    }
-
-    ::placeholder {
-      color: #3b4c54;
-    }
-
-    .editor-pane:focus-within {
-      background: rgba(255, 255, 255, 0.01);
-    }
-  </style>
-</head>
-<body>
-
-  
-
-  <div class="main-wrapper">
-    <div class="editor-pane">
-      <div class="section-label">Input (Plain Text)</div>
-      <textarea id="input" oninput="convertData()" placeholder="Start typing here...">
-Door 1: Basics
-
-Level 1: Spelling
-Question: Choose the correct spelling:
-Answer: friend
-Choices: friend, freind
-Hint: Which one looks right?</textarea>
-    </div>
-
-    <div class="output-pane">
-      <div class="header-row">
-        <div class="section-label">Output (JSON Format)</div>
-        <button class="copy-btn" onclick="copyOutput()" title="Copy to clipboard">
-          <i id="copyIcon" class="fa-regular fa-copy"></i>
-        </button>
-      </div>
-      <textarea id="output" readonly placeholder="JSON result will appear here..."></textarea>
-    </div>
-  </div>
-
-<script>
-window.onload = convertData;
-
-function copyOutput() {
-  const outputText = document.getElementById('output');
-  const btn = document.querySelector('.copy-btn');
-  const icon = document.getElementById('copyIcon');
-
-  if (!outputText.value) return;
-
-  navigator.clipboard.writeText(outputText.value).then(() => {
-    // Visual Feedback
-    btn.classList.add('success');
-    icon.className = 'fa-solid fa-check';
-    
-    setTimeout(() => {
-      btn.classList.remove('success');
-      icon.className = 'fa-regular fa-copy';
-    }, 2000);
-  });
-}
-
-function convertData() {
-  const input = document.getElementById('input').value;
-  const output = document.getElementById('output');
-
-  if (!input.trim()) {
-    output.value = "";
-    return;
-  }
-
-  try {
-    const lines = input.split('\n').map(l => l.trim()).filter(Boolean);
-    const result = { doors: [] };
-    let currentDoor = null;
-    let currentLevel = null;
-
-    lines.forEach(line => {
-      if (line.startsWith('Door')) {
-        currentDoor = {
-          door: result.doors.length + 1,
-          name: line,
-          levels: []
-        };
-        result.doors.push(currentDoor);
-      } else if (line.startsWith('Level')) {
-        currentLevel = {
-          level: (currentDoor?.levels.length || 0) + 1,
-          title: line.split(':')[1]?.trim() || "Untitled",
-          questions: []
-        };
-        if(currentDoor) currentDoor.levels.push(currentLevel);
-      } else if (line.startsWith('Question:')) {
-        if (currentLevel) {
-          currentLevel.questions.push({
-            id: currentLevel.questions.length + 1,
-            question: line.replace('Question:', '').trim()
-          });
-        }
-      } else if (line.startsWith('Answer:')) {
-        if (currentLevel && currentLevel.questions.length > 0) {
-          currentLevel.questions.at(-1).answer = line.replace('Answer:', '').trim();
-        }
-      } else if (line.startsWith('Choices:')) {
-        if (currentLevel && currentLevel.questions.length > 0) {
-          currentLevel.questions.at(-1).choices =
-            line.replace('Choices:', '').split(',').map(c => c.trim());
-        }
-      } else if (line.startsWith('Hint:')) {
-        if (currentLevel && currentLevel.questions.length > 0) {
-          currentLevel.questions.at(-1).hint = line.replace('Hint:', '').trim();
-        }
-      }
-    });
-
-    output.value = JSON.stringify(result, null, 2);
-  } catch (e) {
-    output.value = 'Typing... ⌛';
   }
 }
 </script>
