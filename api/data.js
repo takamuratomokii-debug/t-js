@@ -93,7 +93,7 @@
             {
               "id": 2,
               "question": "Rewrite: my friend is jose",
-              "answer": "My friend is Jose.",
+              "answer": "ANY",
            
               "type":"input",
               
@@ -102,7 +102,7 @@
             {
               "id": 3,
               "question": "Rewrite: we visited manila",
-              "answer": "We visited Manila.",
+              "answer": "ANY",
               "type":"input",
            
               "hint": "Don't forget to capitalize the city name and a Period!"
@@ -110,7 +110,7 @@
             {
               "id": 4,
               "question": "Rewrite: i love my teacher ms. reyes",
-              "answer": "I love my teacher Ms. Reyes.",
+              "answer": "ANY",
               "type":"input",
              
               "hint": "Titles and surnames require capital letters."
@@ -118,7 +118,7 @@
             {
               "id": 5,
               "question": "Rewrite: ana and i went to the park",
-              "answer": "Ana and I went to the park.",
+              "answer": "ANY",
               "type":"input",
              
               "hint": "The word \"I\" is always capitalized when referring to yourself."
@@ -132,7 +132,7 @@
             {
               "id": 1,
               "question": "Rewrite: my name is carlo and i live in cagayan",
-              "answer": "My name is Carlo and I live in Cagayan.",
+              "answer": "ANY",
               "type":"input",
             
               "hint": "Remember to capitalize names, places, the word \"I,\" and end with a period."
@@ -140,7 +140,7 @@
             {
               "id": 2,
               "question": "Rewrite: she likes to read books every day",
-              "answer": "She likes to read books everyday.",
+              "answer": "ANY",
               "type":"input",
             
               "hint": "Start with a capital letter and end with a period."
@@ -148,7 +148,7 @@
             {
               "id": 3,
               "question": "Rewrite: we went to manila last week",
-              "answer": "We went to Manila last week.",
+              "answer": "ANY",
               "type":"input",
               
               "hint": "Cities are proper nouns and need capital letters."
@@ -156,7 +156,7 @@
             {
               "id": 4,
               "question": "Rewrite: i have a pet dog named max",
-              "answer": "I have a pet dog named Max.",
+              "answer": "ANY",
               "type":"input",
              
               "hint": "Pets' names are capitalized just like people's names."
@@ -164,7 +164,7 @@
             {
               "id": 5,
               "question": "Rewrite: my teacher is kind and helpful",
-              "answer": "My teacher is kind and helpful.",
+              "answer": "ANY",
               "type":"input",
              
               "hint": "Ensure the sentence is capitalized correctly and has proper punctuation."
@@ -1089,7 +1089,7 @@
             {
               "id": 2,
               "question": "Use a frame to complete: I like _ _ _ _",
-              "answer": "I like pizza.",
+              "answer": "ANY",
               "type":"input",
               "choices": [
                 "I like pizza.",
@@ -1102,7 +1102,7 @@
             {
               "id": 3,
               "question": "Use a frame to complete: I can _ _ _",
-              "answer": "I can draw.",
+              "answer": "ANY",
               "type":"input",
               "choices": [],
               "hint": "Think of a skill that involves lines, color, and words."
@@ -1110,7 +1110,7 @@
             {
               "id": 4,
               "question": "Use a frame to complete: I have a ______",
-              "answer": "I have a dog.",
+              "answer": "ANY,
               "type":"input",
               "choices": [],
               "hint": "Mention something you own or a pet you have."
@@ -1118,7 +1118,7 @@
             {
               "id": 5,
               "question": "Use a frame to complete: I am ______",
-              "answer": "I am happy!",
+              "answer": "ANY",
               "type":"input",
               "choices": [ ],
               "hint": "Use a word that describes how you are feeling right now."
@@ -1132,7 +1132,7 @@
             {
               "id": 1,
               "question": "Expand the sentence: She runs.",
-              "answer": "She runs in the park.",
+              "answer": "ANY",
               "type":"input",
               "choices": [],
               "hint": "Add a place or a time to make the sentence more detailed."
@@ -1140,7 +1140,7 @@
             {
               "id": 2,
               "question": "Expand the sentence: rice for lunch.",
-              "answer": "He eats rice for lunch.",
+              "answer": "ANY,
               "type":"input",
               "choices": [],
               "hint": "Tell us what he is eating or when he is eating it."
@@ -1148,7 +1148,7 @@
             {
               "id": 3,
               "question": "Expand the sentence: Read book all day. ",
-              "answer": "I read a book every night.",
+              "answer": "ANY",
               "type":"input",
                 "choices": [],
               "hint": "Mention what you are reading to provide more information."
@@ -1156,7 +1156,7 @@
             {
               "id": 4,
               "question": "Expand the sentence: They play.",
-              "answer": "They play basketball after school.",
+              "answer": "ANY",
               "type":"input",
                 "choices": [],
               "hint": "Add the name of a game or a time when they play; Maybe Before, After or Right now."
@@ -1164,7 +1164,7 @@
             {
               "id": 5,
               "question": "Expand the sentence: We study.",
-              "answer": "We study English at school.",
+              "answer": "ANY",
               "type":"input",
               "choices": [],
               "hint": "Specify the subject or (at) the location where the studying happens. Sc-"
@@ -1178,7 +1178,7 @@
             {
               "id": 1,
               "question": "Combine: I like milk. I like juice.",
-              "answer": "I like milk and I like juice.",
+              "answer": "ANY",
               "type":"input",
             "choices": [],
               "hint": "Use \"and\" to join two similar ideas together."
@@ -1186,7 +1186,7 @@
             {
               "id": 2,
               "question": "Combine: She is tall. She is strong.",
-              "answer": "She is tall and she is strong.",
+              "answer": "ANY",
               "type":"input",
             "choices": [],
              "hint": "Use \"and\" to join two similar ideas together."
@@ -1194,7 +1194,7 @@
             {
               "id": 3,
               "question": "Combine: I went to the park. I saw my friend.",
-              "answer": "I went to the park and I saw my friend.",
+              "answer": "ANY",
               "type":"input",
             "choices": [],
               "hint": "Use a word that shows these two actions happened together."
@@ -1202,7 +1202,7 @@
             {
               "id": 4,
               "question": "Combine: He studied hard. He failed the test.",
-              "answer": "He studied hard but he failed the test.",
+              "answer": "ANY",
               "type":"input",
               "choices": [],
               "hint": "Use \"but\" to show a contrast between a good effort and a sad result."
@@ -1241,7 +1241,7 @@
             {
               "id": 3,
               "question": "Write 3-5 connected sentences about your favorite hobby.",
-              "answer": "I love painting in my free time. I use bright colors and brushes. It helps me feel relaxed. I like to show my paintings to my family.",
+              "answer": "ANY",
               "type":"input",
               "choices": [],
               "hint": "Explain what the hobby is, how you do it, and how it makes you feel."
