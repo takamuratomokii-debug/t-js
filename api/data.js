@@ -1110,7 +1110,7 @@
             {
               "id": 4,
               "question": "Use a frame to complete: I have a ______",
-              "answer": "ANY,
+              "answer": "ANY",
               "type":"input",
               "choices": [],
               "hint": "Mention something you own or a pet you have."
@@ -1140,7 +1140,7 @@
             {
               "id": 2,
               "question": "Expand the sentence: rice for lunch.",
-              "answer": "ANY,
+              "answer": "ANY",
               "type":"input",
               "choices": [],
               "hint": "Tell us what he is eating or when he is eating it."
