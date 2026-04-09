@@ -178,7 +178,7 @@
             {
               "id": 1,
               "question": "Write a sentence about how your family motivates you",
-              "answer": "My family motivates me to learn.",
+              "answer": "ANY",
               "type":"input",
               
               "hint": "Think about the family that helps you want to work hard."
@@ -186,7 +186,7 @@
             {
               "id": 2,
               "question": "Write a sentence about your goal",
-              "answer": "I want to finish my studies.",
+              "answer": "ANY",
               "type":"input",
              
               "hint": "What is something you want to achieve in the future?"
@@ -194,7 +194,7 @@
             {
               "id": 3,
               "question": "Write a sentence about your inspiration",
-              "answer": "My parents inspire me every day.",
+              "answer": "ANY",
               "type":"input",
               
               "hint": "Who do you look up to or want to be like?"
@@ -202,7 +202,7 @@
             {
               "id": 4,
               "question": "Write a sentence about your dream gets successful.",
-              "answer": "I dream of becoming successful.",
+              "answer": "ANY",
               "type":"input",
              
               "hint": "What kind of life or career do you imagine for yourself?"
@@ -210,7 +210,7 @@
             {
               "id": 5,
               "question": "Write a sentence about why you study",
-              "answer": "I study to have a better future.",
+              "answer": "ANY",
               "type":"input",
               
               "hint": "Think about how education can help you later in life."
