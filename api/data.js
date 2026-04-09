@@ -140,7 +140,7 @@
             {
               "id": 2,
               "question": "Rewrite: she likes to read books every day",
-              "answer": "She likes to read books every day.",
+              "answer": "She likes to read books everyday.",
               "type":"input",
             
               "hint": "Start with a capital letter and end with a period."
