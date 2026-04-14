@@ -1132,7 +1132,7 @@
             {
               "id": 1,
               "question": "Expand the sentence: She runs.",
-              "answer": "ANY",
+              "answer": "ANY13",
               "type":"input",
               "choices": [],
               "hint": "Add a place or a time to make the sentence more detailed."
@@ -1140,7 +1140,7 @@
             {
               "id": 2,
               "question": "Expand the sentence: rice for lunch.",
-              "answer": "ANY",
+              "answer": "ANY13",
               "type":"input",
               "choices": [],
               "hint": "Tell us what he is eating or when he is eating it."
@@ -1148,7 +1148,7 @@
             {
               "id": 3,
               "question": "Expand the sentence: Read book all day. ",
-              "answer": "ANY",
+              "answer": "ANY13",
               "type":"input",
                 "choices": [],
               "hint": "Mention what you are reading to provide more information."
@@ -1156,7 +1156,7 @@
             {
               "id": 4,
               "question": "Expand the sentence: They play.",
-              "answer": "ANY",
+              "answer": "ANY13",
               "type":"input",
                 "choices": [],
               "hint": "Add the name of a game or a time when they play; Maybe Before, After or Right now."
@@ -1164,7 +1164,7 @@
             {
               "id": 5,
               "question": "Expand the sentence: We study.",
-              "answer": "ANY",
+              "answer": "ANY13",
               "type":"input",
               "choices": [],
               "hint": "Specify the subject or (at) the location where the studying happens. Sc-"
@@ -1178,7 +1178,7 @@
             {
               "id": 1,
               "question": "Combine: I like milk. I like juice.",
-              "answer": "ANY",
+              "answer": "ANY13",
               "type":"input",
             "choices": [],
               "hint": "Use \"and\" to join two similar ideas together."
@@ -1186,7 +1186,7 @@
             {
               "id": 2,
               "question": "Combine: She is tall. She is strong.",
-              "answer": "ANY",
+              "answer": "ANY13",
               "type":"input",
             "choices": [],
              "hint": "Use \"and\" to join two similar ideas together."
@@ -1194,7 +1194,7 @@
             {
               "id": 3,
               "question": "Combine: I went to the park. I saw my friend.",
-              "answer": "ANY",
+              "answer": "ANY13",
               "type":"input",
             "choices": [],
               "hint": "Use a word that shows these two actions happened together."
@@ -1202,7 +1202,7 @@
             {
               "id": 4,
               "question": "Combine: He studied hard. He failed the test.",
-              "answer": "ANY",
+              "answer": "ANY13",
               "type":"input",
               "choices": [],
               "hint": "Use \"but\" to show a contrast between a good effort and a sad result."
@@ -1224,7 +1224,7 @@
             {
               "id": 1,
               "question": "Write 3-5 connected sentences about your family.",
-              "answer": "ANY",
+              "answer": "ANY35",
               "type":"input",
               "choices": [],
               
@@ -1233,7 +1233,7 @@
             {
               "id": 2,
               "question": "Write 3-5 connected sentences about your school.",
-              "answer": "ANY",
+              "answer": "ANY35",
               "type":"input",
             "choices": [],
               "hint": "Describe the place, the people, and what you do there."
@@ -1241,7 +1241,7 @@
             {
               "id": 3,
               "question": "Write 3-5 connected sentences about your favorite hobby.",
-              "answer": "ANY",
+              "answer": "ANY35",
               "type":"input",
               "choices": [],
               "hint": "Explain what the hobby is, how you do it, and how it makes you feel."
@@ -1249,7 +1249,7 @@
             {
               "id": 4,
               "question": "Write 3-5 connected sentences about your pet.",
-              "answer": "ANY",
+              "answer": "ANY35",
               "type":"input",
             "choices": [],
               "hint": "Give your pet's name and describe their personality or habits."
@@ -1257,7 +1257,7 @@
             {
               "id": 5,
               "question": "Write 3-5 connected sentences about your favorite food.",
-              "answer": "ANY",
+              "answer": "ANY35",
               "type":"input",
               "contains": [
                 "I", "like"
